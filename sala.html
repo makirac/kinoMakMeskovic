@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sala</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f0f0f0;
+}
+header{
+    background:#1b263b;
+    color:#e0e1dd;
+    padding:20px;
+}
+header h1, header p{
+    margin:5px;
+}
+.screen{
+    background:#e0e1dd;
+    color:#1b263b;
+    font-weight:bold;
+    padding:10px;
+    margin:20px auto;
+    width:80%;
+    border-radius:5px;
+}
+.seating{
+    display:grid;
+    grid-template-columns: 30px repeat(10, 40px);
+    gap:5px;
+    justify-content:center;
+    margin-bottom:50px;
+}
+.row{
+    display: contents;
+}
+.row-letter{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+.seat{
+    width:40px;
+    height:40px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.free{background:green;}
+.occupied{background:red;}
+.reserved{background:gray;}
+legend{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:20px;
+}
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+.legend-item div{
+    width:20px;
+    height:20px;
+    border-radius:3px;
+}
+@media(max-width:500px){
+    .seating{
+        grid-template-columns: 20px repeat(10, 25px);
+        gap:3px;
+    }
+    .seat{
+        width:25px;
+        height:25px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Film: Oppenheimer</h1>
+<p>Vrijeme: 18:30 | Sala: 3</p>
+</header>
+
+<div class="screen">PLATNO</div>
+
+<div class="legend">
+<div class="legend-item"><div class="free"></div><span>Slobodno</span></div>
+<div class="legend-item"><div class="occupied"></div><span>Zauzeto</span></div>
+<div class="legend-item"><div class="reserved"></div><span>Rezervisano</span></div>
+</div>
+
+<div class="seating">
+<div class="row-letter">A</div>
+<div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div><div class="seat reserved"></div>
+<div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">B</div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat reserved"></div><div class="seat free"></div><div class="seat free"></div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">C</div>
+<div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div><div class="seat reserved"></div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">D</div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div>
+<div class="seat reserved"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">E</div>
+<div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat reserved"></div><div class="seat free"></div>
+
+<div class="row-letter">F</div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+<div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">G</div>
+<div class="seat free"></div><div class="seat reserved"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat free"></div>
+
+<div class="row-letter">H</div>
+<div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+<div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat reserved"></div><div class="seat free"></div>
+</div>
+
+</body>
+</html>
