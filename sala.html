@@ -79,6 +79,14 @@ legend{
         height:25px;
     }
 }
+.seat.free:hover {
+    outline: 2px solid yellow;
+}
+.seat.occupied:hover,
+.seat.reserved:hover {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
 </style>
 </head>
 <body>
@@ -129,6 +137,7 @@ legend{
 <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
 <div class="seat free"></div><div class="seat occupied"></div><div class="seat free"></div><div class="seat reserved"></div><div class="seat free"></div>
 </div>
-
+<script src="scripts/app.js"></script>
+<script src="scripts/kinoSala.js"></script>
 </body>
 </html>
