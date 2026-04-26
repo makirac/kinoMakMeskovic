@@ -1,22 +1,15 @@
-const podaci = {
-    projekcije: [
-        {
-            film: "Oppenheimer",
-            vrijeme: "18:30",
-            sjedista: [
-                { red: "A", broj: 2, status: "occupied" },
-                { red: "A", broj: 5, status: "reserved" },
-                { red: "B", broj: 8, status: "occupied" }
-            ]
-        },
-        {
-            film: "Spider-Man: Beyond",
-            vrijeme: "20:00",
-            sjedista: [
-                { red: "A", broj: 1, status: "reserved" },
-                { red: "B", broj: 4, status: "occupied" },
-                { red: "C", broj: 6, status: "occupied" }
-            ]
-        }
-    ]
-};
+let podaci = JSON.parse(localStorage.getItem("kinoPodaci"));
+
+if (!podaci) {
+    podaci = {
+        projekcije: [
+            { film: "Oppenheimer", vrijeme: "18:30", sjedista: [] },
+            { film: "Spider-Man", vrijeme: "20:00", sjedista: [] },
+            { film: "Dune", vrijeme: "21:30", sjedista: [] },
+            { film: "Batman", vrijeme: "17:00", sjedista: [] },
+            { film: "Interstellar", vrijeme: "19:45", sjedista: [] }
+        ]
+    };
+
+    localStorage.setItem("kinoPodaci", JSON.stringify(podaci));
+}
